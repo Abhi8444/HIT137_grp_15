@@ -27,7 +27,7 @@ def encrypt(text, n, m):
             encrypted_text += shift_char_within_range(char, 'A', 'M', -n)
         elif 'N' <= char <= 'Z':
             encrypted_text += shift_char_within_range(char, 'N', 'Z', m ** 2)
- else:
+        else:
             encrypted_text += char  # this is for the number and other special character
     return encrypted_text
         
@@ -44,7 +44,7 @@ def decrypt(text, n, m):
             decrypted_text += shift_char_within_range(char, 'A', 'M', n)
         elif 'N' <= char <= 'Z':
             decrypted_text += shift_char_within_range(char, 'N', 'Z', -(m ** 2))
-              else:
+        else:
             encrypted_text += char  # this is for the number and other special character
     return encrypted_text  
         

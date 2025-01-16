@@ -14,7 +14,8 @@ for filename in os.listdir(folder_path):
         file_path = os.path.join(folder_path, filename)
         # Read the CSV file
         df = pd.read_csv(file_path)
-        
+# checking if the csv file contains all the column
+        if all(col in df.columns for col in ['STATION_NAME', 'STN_ID', 'LAT', 'LON', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']):        
             # creating  Loop for each month and calculate the average temperature
             for i, month in enumerate(['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'], start=1):
                 monthly_avg = df[month].mean()

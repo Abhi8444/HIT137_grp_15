@@ -33,7 +33,11 @@ def main():
     screen = turtle.Screen()
     screen.bgcolor("white")
     t.speed("fast")
-
+# Position the turtle
+    t.left(90)
+    t.up()
+    t.backward(100)
+    t.down()
     # Draw the tree
     draw_branch(t, starting_branch_length, left_angle, right_angle, depth, reduction_factor)
 

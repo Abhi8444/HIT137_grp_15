@@ -1,0 +1,12 @@
+Month 1: 32.73C
+Month 2: 32.12C
+Month 3: 30.42C
+Month 4: 27.57C
+Month 5: 23.97C
+Month 6: 21.03C
+Month 7: 20.36C
+Month 8: 21.81C
+Month 9: 24.91C
+Month 10: 27.58C
+Month 11: 29.82C
+Month 12: 31.47C

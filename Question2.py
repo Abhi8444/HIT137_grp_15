@@ -24,7 +24,16 @@ for filename in os.listdir(folder_path):
 # Calculate the overall average temperature for each month
 overall_monthly_averages = {month: sum(temps) / len(temps) for month, temps in monthly_averages.items() if temps}
 
-
+# Grouping monthly averages into seasons and calculate seasonal averages
+for month, avg_temp in overall_monthly_averages.items():
+    if month in [12, 1, 2]:
+        seasonal_averages['Summer'].append(avg_temp)
+    elif month in [3, 4, 5]:
+        seasonal_averages['Autumn'].append(avg_temp)
+    elif month in [6, 7, 8]:
+        seasonal_averages['Winter'].append(avg_temp)
+    elif month in [9, 10, 11]:
+        seasonal_averages['Spring'].append(avg_temp)
 
 # Calculating the overall average temperature for each season
 overall_seasonal_averages = {season: sum(temps) / len(temps) for season, temps in seasonal_averages.items() if temps}

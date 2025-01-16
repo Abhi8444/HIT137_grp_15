@@ -28,7 +28,11 @@ def main():
     depth = int(input("Enter recursion depth: "))
     reduction_factor = float(input("Enter branch length reduction factor: "))
 
-
+# Set up turtle graphics
+    t = turtle.Turtle()
+    screen = turtle.Screen()
+    screen.bgcolor("white")
+    t.speed("fast")
 
     # Draw the tree
     draw_branch(t, starting_branch_length, left_angle, right_angle, depth, reduction_factor)
